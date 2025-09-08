@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nofal.nofapp.SignupC">
+   <children>
+      <Button fx:id="Loginbtn" alignment="CENTER" layoutY="10.0" mnemonicParsing="false" onAction="#LoginSwitch" prefHeight="57.0" prefWidth="244.0" text="Login">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <Button fx:id="Signupbtn" alignment="CENTER" layoutX="294.0" layoutY="10.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" text="SignUp">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Line endX="451.0" layoutX="87.0" layoutY="77.0" startX="-100.0" strokeWidth="3.0" />
+      <Line endX="441.0" endY="3.814697265625E-6" layoutX="97.0" layoutY="2.0" startX="-100.0" strokeWidth="3.0" />
+      <Circle fill="DODGERBLUE" layoutX="101.0" layoutY="184.0" radius="87.0" stroke="BLACK" strokeType="INSIDE" />
+      <TextField fx:id="Name" layoutX="294.0" layoutY="125.0" prefHeight="25.0" prefWidth="244.0" promptText="Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Email" layoutX="294.0" layoutY="168.0" prefHeight="25.0" prefWidth="244.0" promptText="Email">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="Password" layoutX="294.0" layoutY="210.0" prefHeight="25.0" prefWidth="244.0" promptText="Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </PasswordField>
+      <ComboBox fx:id="Genders" layoutX="294.0" layoutY="93.0" prefHeight="25.0" prefWidth="244.0" promptText="Gender" />
+      <Button fx:id="SignupAcc" alignment="CENTER" layoutX="232.0" layoutY="277.0" mnemonicParsing="false" onAction="#Signup" prefHeight="57.0" prefWidth="306.0" text="SignUp to Nofal APP !">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Label alignment="CENTER" layoutX="254.0" layoutY="22.0" text="OR">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

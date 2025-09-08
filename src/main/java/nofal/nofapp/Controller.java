@@ -1,20 +1,15 @@
 package nofal.nofapp;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
+import java.io.IOException;
+
 public class Controller {
-	@FXML
-	private Button Loginbtn,SignUpbtn;
 
-	@FXML
-	private ComboBox<String> Genders;
-
-
-	@FXML
-	public void initialize(){
-		Genders.getItems().addAll("Male", "Female");
-	}
 }
