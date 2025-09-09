@@ -40,7 +40,7 @@
          </font>
       </PasswordField>
       <ImageView fitHeight="212.0" fitWidth="200.0" layoutX="14.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="Loginbtn1" alignment="CENTER" layoutX="184.0" layoutY="277.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="353.0" text="Login To Nofal APP!">
+      <Button fx:id="LoginAcc" alignment="CENTER" layoutX="184.0" layoutY="277.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="353.0" text="Login To Nofal APP!">
          <font>
             <Font size="27.0" />
          </font>

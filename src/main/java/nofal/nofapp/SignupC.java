@@ -4,23 +4,25 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 
 public class SignupC {
 
+	private String _Name,_Password,_Email;
 	@FXML
 	private PasswordField Password;
 
 	@FXML
-	private Button Signupbtn, Loginbtn;
+	private TextField Name,Email;
 
 	@FXML
-	private TextField Name,Email;
+	private Label NameLabel,EmailLabel,PasswordLabel;
+
+	@FXML
+	private Button Signupbtn, Loginbtn,SignupAcc;
+
 
 	@FXML
 	private ComboBox<String> Genders;
@@ -37,6 +39,34 @@ public class SignupC {
 
 		Scene scene = Loginbtn.getScene();
 		scene.setRoot(LoginRoot);
+	}
+
+	private void CheckIfValid(){
+		if(Name.getText() == null || Name.getText().isEmpty()){
+			NameLabel.setText("Please enter your name");
+			return;
+		}
+
+		int sIndex = Email.getText().indexOf("@");
+		int Domain = Email.getText().indexOf(".");
+		if (sIndex == -1 || Domain == -1) {
+			EmailLabel.setText("Invalid email: missing '@'");
+			return;
+		}
+		else if(Email.getText().substring(sIndex + 1).isEmpty()
+				|| Email.getText().substring(Domain + 1).isEmpty()){
+			EmailLabel.setText("Invalid email: nothing after '@'");
+			return;
+		}
+
+		if(Password.getLength() < 8){
+			PasswordLabel.setText("Password needs to be over 8 characters long");
+			return;
+		}
+		_Name = Name.getText();
+		_Password = Password.getText();
+		_Email = Email.getText();
+
 	}
 
 	public void Signup(){

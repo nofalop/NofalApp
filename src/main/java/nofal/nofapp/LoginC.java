@@ -12,9 +12,7 @@ import java.io.IOException;
 
 public class LoginC {
 	@FXML
-	private Button Loginbtn;
-	@FXML
-	private Button SignUpbtn;
+	private Button SignUpbtn, Loginbtn,LoginAcc;
 	@FXML
 	private TextField Email;
 	@FXML

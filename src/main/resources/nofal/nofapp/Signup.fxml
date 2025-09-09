@@ -11,14 +11,14 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nofal.nofapp.SignupC">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nofal.nofapp.SignupC">
    <children>
       <Button fx:id="Loginbtn" alignment="CENTER" layoutY="10.0" mnemonicParsing="false" onAction="#LoginSwitch" prefHeight="57.0" prefWidth="244.0" text="Login">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <Button fx:id="Signupbtn" alignment="CENTER" layoutX="294.0" layoutY="10.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" text="SignUp">
+      <Button fx:id="Signupbtn" alignment="CENTER" layoutX="363.0" layoutY="10.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" text="SignUp">
          <font>
             <Font size="27.0" />
          </font>
@@ -26,26 +26,26 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Line endX="451.0" layoutX="87.0" layoutY="77.0" startX="-100.0" strokeWidth="3.0" />
-      <Line endX="441.0" endY="3.814697265625E-6" layoutX="97.0" layoutY="2.0" startX="-100.0" strokeWidth="3.0" />
-      <Circle fill="DODGERBLUE" layoutX="101.0" layoutY="184.0" radius="87.0" stroke="BLACK" strokeType="INSIDE" />
-      <TextField fx:id="Name" layoutX="294.0" layoutY="125.0" prefHeight="25.0" prefWidth="244.0" promptText="Name">
+      <Line endX="520.0" layoutX="87.0" layoutY="77.0" startX="-100.0" strokeWidth="3.0" />
+      <Line endX="510.0" endY="-2.0000133514404297" layoutX="97.0" layoutY="2.0" startX="-100.0" strokeWidth="3.0" />
+      <Circle fill="DODGERBLUE" layoutX="136.0" layoutY="219.0" radius="122.0" stroke="BLACK" strokeType="INSIDE" />
+      <TextField fx:id="Name" layoutX="359.0" layoutY="169.0" prefHeight="25.0" prefWidth="244.0" promptText="Name">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="Email" layoutX="294.0" layoutY="168.0" prefHeight="25.0" prefWidth="244.0" promptText="Email">
+      <TextField fx:id="Email" layoutX="359.0" layoutY="238.0" prefHeight="25.0" prefWidth="244.0" promptText="Email">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="Password" layoutX="294.0" layoutY="210.0" prefHeight="25.0" prefWidth="244.0" promptText="Password">
+      <PasswordField fx:id="Password" layoutX="359.0" layoutY="308.0" prefHeight="25.0" prefWidth="244.0" promptText="Password">
          <font>
             <Font size="15.0" />
          </font>
       </PasswordField>
-      <ComboBox fx:id="Genders" layoutX="294.0" layoutY="93.0" prefHeight="25.0" prefWidth="244.0" promptText="Gender" />
-      <Button fx:id="SignupAcc" alignment="CENTER" layoutX="232.0" layoutY="277.0" mnemonicParsing="false" onAction="#Signup" prefHeight="57.0" prefWidth="306.0" text="SignUp to Nofal APP !">
+      <ComboBox fx:id="Genders" layoutX="359.0" layoutY="97.0" prefHeight="31.0" prefWidth="244.0" promptText="Gender" />
+      <Button fx:id="SignupAcc" alignment="CENTER" layoutX="297.0" layoutY="356.0" mnemonicParsing="false" onAction="#Signup" prefHeight="57.0" prefWidth="306.0" text="SignUp to Nofal APP !">
          <font>
             <Font size="27.0" />
          </font>
@@ -53,9 +53,26 @@
             <Insets />
          </opaqueInsets>
       </Button>
-      <Label alignment="CENTER" layoutX="254.0" layoutY="22.0" text="OR">
+      <Label alignment="CENTER" layoutX="282.0" layoutY="23.0" text="OR">
          <font>
-            <Font size="22.0" />
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="NameLabel" layoutX="359.0" layoutY="143.0" prefHeight="17.0" prefWidth="244.0" text="Enter you Name">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="359.0" layoutY="253.0" prefHeight="17.0" prefWidth="244.0" />
+      <Label layoutX="359.0" layoutY="330.0" prefHeight="17.0" prefWidth="244.0" />
+      <Label fx:id="EmailLabel" layoutX="359.0" layoutY="212.0" prefHeight="17.0" prefWidth="244.0" text="Enter you Email">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="PasswordLabel" layoutX="359.0" layoutY="282.0" prefHeight="17.0" prefWidth="244.0" text="Enter you Password">
+         <font>
+            <Font size="17.0" />
          </font>
       </Label>
    </children>
