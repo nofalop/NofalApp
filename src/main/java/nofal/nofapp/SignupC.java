@@ -80,6 +80,11 @@ public class SignupC {
 			return false;
 		}
 
+		if(saveJson.CheckData(Email, Password)){
+
+			return false;
+		}
+
 		//if no gender is selected it selects a random gender
 		if(Genders.getSelectionModel().getSelectedIndex() == -1){
 			int randomIndex = (int)(Math.random() * Genders.getItems().size());
@@ -90,6 +95,7 @@ public class SignupC {
 		_Password = Password.getText();
 		_Email = Email.getText();
 		_Gender = Genders.getSelectionModel().getSelectedItem();
+
 		return true;
 
 	}
