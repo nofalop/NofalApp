@@ -7,73 +7,72 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nofal.nofapp.SignupC">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1001.0" styleClass="backgroundColor" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nofal.nofapp.SignupC">
    <children>
-      <Button fx:id="Loginbtn" alignment="CENTER" layoutY="10.0" mnemonicParsing="false" onAction="#LoginSwitch" prefHeight="57.0" prefWidth="244.0" text="Login">
-         <font>
-            <Font size="27.0" />
-         </font>
-      </Button>
-      <Button fx:id="Signupbtn" alignment="CENTER" layoutX="363.0" layoutY="10.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" text="SignUp">
-         <font>
-            <Font size="27.0" />
-         </font>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </Button>
-      <Line endX="520.0" layoutX="87.0" layoutY="77.0" startX="-100.0" strokeWidth="3.0" />
-      <Line endX="510.0" endY="-2.0000133514404297" layoutX="97.0" layoutY="2.0" startX="-100.0" strokeWidth="3.0" />
-      <Circle fill="DODGERBLUE" layoutX="136.0" layoutY="219.0" radius="122.0" stroke="BLACK" strokeType="INSIDE" />
-      <TextField fx:id="Name" layoutX="359.0" layoutY="169.0" prefHeight="25.0" prefWidth="244.0" promptText="Name">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="Email" layoutX="359.0" layoutY="238.0" prefHeight="25.0" prefWidth="244.0" promptText="Email">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </TextField>
-      <PasswordField fx:id="Password" layoutX="359.0" layoutY="308.0" prefHeight="25.0" prefWidth="244.0" promptText="Password">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </PasswordField>
-      <ComboBox fx:id="Genders" layoutX="359.0" layoutY="97.0" prefHeight="31.0" prefWidth="244.0" promptText="Gender" />
-      <Button fx:id="SignupAcc" alignment="CENTER" layoutX="297.0" layoutY="356.0" mnemonicParsing="false" onAction="#Signup" prefHeight="57.0" prefWidth="306.0" text="SignUp to Nofal APP !">
-         <font>
-            <Font size="27.0" />
-         </font>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </Button>
-      <Label alignment="CENTER" layoutX="282.0" layoutY="23.0" text="OR">
-         <font>
-            <Font size="29.0" />
-         </font>
-      </Label>
-      <Label fx:id="NameLabel" layoutX="359.0" layoutY="143.0" prefHeight="17.0" prefWidth="244.0" text="Enter you Name">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Label layoutX="359.0" layoutY="253.0" prefHeight="17.0" prefWidth="244.0" />
-      <Label layoutX="359.0" layoutY="330.0" prefHeight="17.0" prefWidth="244.0" />
-      <Label fx:id="EmailLabel" layoutX="359.0" layoutY="212.0" prefHeight="17.0" prefWidth="244.0" text="Enter you Email">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <Label fx:id="PasswordLabel" layoutX="359.0" layoutY="282.0" prefHeight="17.0" prefWidth="244.0" text="Enter you Password">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
+      <AnchorPane layoutX="92.0" layoutY="70.0" style="-fx-background-radius: 20; -fx-background-color: #f0f0f0;" styleClass="Form" stylesheets="@Style.css">
+         <children>
+            <Rectangle arcHeight="30.0" arcWidth="50.0" fill="#eeeeee" height="73.0" layoutX="156.0" layoutY="113.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="525.0" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="113.0" />
+            <Button fx:id="Loginbtn" alignment="CENTER" layoutX="165.0" layoutY="119.0" mnemonicParsing="false" onAction="#LoginSwitch" prefHeight="57.0" prefWidth="244.0" styleClass="backgroundColor" stylesheets="@Style.css" text="Login">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
+            <Button fx:id="Signupbtn" alignment="CENTER" layoutX="426.0" layoutY="119.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" styleClass="backgroundColor" stylesheets="@Style.css" text="SignUp">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <TextField fx:id="Name" blendMode="SRC_ATOP" layoutX="299.0" layoutY="230.0" promptText="Name" styleClass="TextfieldColor" stylesheets="@Style.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="Email" layoutX="299.0" layoutY="365.0" promptText="Email" styleClass="TextfieldColor">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="Password" layoutX="299.0" layoutY="440.0" promptText="Password" styleClass="TextfieldColor" stylesheets="@Style.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </PasswordField>
+            <ComboBox fx:id="Genders" layoutX="299.0" layoutY="288.0" prefHeight="31.0" prefWidth="191.0" promptText="Gender" style="-fx-background-color: white;" styleClass="TextfieldColor" stylesheets="@Style.css" />
+            <Button fx:id="SignupAcc" alignment="CENTER" layoutX="242.0" layoutY="514.0" mnemonicParsing="false" onAction="#Signup" prefHeight="57.0" prefWidth="306.0" style="-fx-background-color: #dddddd;" text="SignUp to Nofal APP !">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Label fx:id="NameLabel" layoutX="299.0" layoutY="205.0" text="Enter you Name">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="EmailLabel" layoutX="301.0" layoutY="340.0" text="Enter you Email">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="PasswordLabel" layoutX="299.0" layoutY="415.0" text="Enter you Password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="182.0" text="Welcome to Nofal App">
+               <font>
+                  <Font name="Andalus" size="51.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
