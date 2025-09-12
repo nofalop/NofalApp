@@ -2,13 +2,17 @@ package nofal.nofapp;
 
 import java.io.*;
 import java.lang.reflect.Type;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 import javafx.scene.control.Alert;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class SaveJson {
 	// You can remove setPrettyPrinting() if you want compact one-line JSON
@@ -40,6 +44,31 @@ public class SaveJson {
 		catch (IOException ex) {
 			showErr(ex.getMessage());
 		}
+	}
+	public boolean CheckData(TextField email,  Optional<PasswordField> passwordOpt){
+		try{
+			Map<String, User> accounts = loadAccounts();
+			if(accounts.isEmpty()){
+				return false;
+			}
+
+			String emailValue = email.getText();
+			String passwordValue = passwordOpt.map(PasswordField::getText).orElse("");
+
+			if(emailValue == null || emailValue.isBlank() || passwordValue.isEmpty()){
+				return false;
+			}
+
+			for (User user : accounts.values()){
+				if(user.getEmail().equals(emailValue) && user.getPassword().equals(passwordValue)){
+					return true;
+				}
+			}
+		}
+		catch (OutOfMemoryError ex){
+			showErr(ex.getMessage());
+		}
+		return false; // returns False if it doesn't find it
 	}
 
 	private void showErr(String msg) {
