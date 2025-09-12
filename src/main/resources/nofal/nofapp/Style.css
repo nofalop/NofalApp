@@ -1,22 +1,23 @@
-.backgroundColor{
-    -fx-background: linear-gradient(to bottom, #66FFFF, #8a4baf);
+.backgroundColor {
+    -fx-background-color: linear-gradient(to bottom, #66FFFF, #8a4baf);
 }
-.Form{
+
+.Form {
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
 }
-.TextfieldColor{
+
+.TextfieldColor {
     -fx-border-color: #dddddd;
     -fx-border-width: 2;
     -fx-border-radius: 5;
 }
 
-.rectangle{
+.rectangle {
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
 }
 
 .button {
     -fx-background-color: linear-gradient(to right, #dddddd, #4d4d4d);
-    -fx-border-color: #adadad;
     -fx-border-color: #adadad;
     -fx-border-width: 2;
     -fx-border-radius: 30;
