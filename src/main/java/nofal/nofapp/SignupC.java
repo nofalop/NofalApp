@@ -1,9 +1,7 @@
 package nofal.nofapp;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 
 import java.io.IOException;
@@ -34,7 +32,7 @@ public class SignupC {
 	private Label NameLabel,EmailLabel,PasswordLabel;
 
 	@FXML
-	private Button Signupbtn, Loginbtn,SignupAcc;
+	private Button Signupbtn;
 
 
 	@FXML
@@ -46,12 +44,8 @@ public class SignupC {
 		Signupbtn.setStyle("-fx-background-color: #3498db;");
 	}
 
-	public void LoginSwitch() throws IOException {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
-		Parent LoginRoot = loader.load();
-
-		Scene scene = Loginbtn.getScene();
-		scene.setRoot(LoginRoot);
+	public void LoginSwitch(ActionEvent event) throws IOException {
+		SceneManager.switchScene(event, "Login.fxml");
 	}
 
 	private boolean CheckIfValid(){
@@ -100,9 +94,10 @@ public class SignupC {
 
 	}
 
-	public void Signup(){
+	public void Signup(ActionEvent event) throws IOException {
 		if(CheckIfValid()){
 			saveJson.saveData(_Name,_Password, _Email, _Gender);
+			SceneManager.switchScene(event, "GameSelection.fxml");
 		}
 	}
 }
