@@ -1,0 +1,14 @@
+.image-view {
+    -fx-cursor: hand;
+}
+
+.image-view:hover {
+    -fx-opacity: 0.7;
+}
+
+.text-field {
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #ccc;
+    -fx-padding: 5 10;
+}

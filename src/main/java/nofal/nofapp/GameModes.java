@@ -1,7 +1,11 @@
 package nofal.nofapp;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import nofal.nofapp.Gamemodes.Web;
+
+import java.io.IOException;
 
 public class GameModes {
 
@@ -13,7 +17,7 @@ public class GameModes {
 
 	}
 
-	public void openGoogle(){
-
+	public void openGoogle(ActionEvent event) throws IOException {
+		SceneManager.switchScene(event, "Web.fxml");
 	}
 }

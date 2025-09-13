@@ -33,17 +33,17 @@
             </Button>
             <ImageView fitHeight="190.0" fitWidth="209.0" layoutX="24.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Images/PacMan.jpg" />
+                  <Image url="@Images/GameSelection/PacMan.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="190.0" fitWidth="209.0" layoutX="287.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Images/Google.jpg" />
+                  <Image url="@Images/GameSelection/Google.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="190.0" fitWidth="209.0" layoutX="551.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Images/Soon.jpg" />
+                  <Image url="@Images/GameSelection/Soon.jpg" />
                </image>
             </ImageView>
             <Label layoutX="128.0" layoutY="7.0" text="Select one of these options">
