@@ -1,41 +1,35 @@
 package nofal.nofapp;
 
-import com.google.gson.Gson;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 
 import java.io.IOException;
 
 public class LoginC {
-	private final Gson gson = new Gson();
 	private final SaveJson saveJson = new SaveJson();
 	private final Alert conAlert = new Alert(Alert.AlertType.CONFIRMATION);
 	private final Alert badAlert = new Alert(Alert.AlertType.ERROR);
 	@FXML
-	private Button Signupbtn, Loginbtn,LoginAcc;
+	private Button Loginbtn;
 	@FXML
 	private TextField Email;
 	@FXML
 	private PasswordField Password;
 
 	@FXML
-	private Label NameLabel,EmailLabel,PasswordLabel;
-
-	@FXML
 	public void initialize(){
 		Loginbtn.setStyle("-fx-background-color: #3498db;");
 	}
 
-	public void Login(){
+	public void Login(ActionEvent event) throws IOException {
 		if(!saveJson.CheckData(Email, Password)){
 			System.out.println("Account was not found");
 			Accnotfound();
 			return;
 		}
 		confirmation();
+		SceneManager.switchScene(event, "GameSelection.fxml");
 	}
 
 	private void confirmation(){
@@ -51,11 +45,7 @@ public class LoginC {
 		badAlert.showAndWait();
 	}
 
-	public void SignupSwitch() throws IOException {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("Signup.fxml"));
-		Parent SignupRoot = loader.load();
-
-		Scene scene = Signupbtn.getScene();
-		scene.setRoot(SignupRoot);
+	public void SignupSwitch(ActionEvent event) throws IOException {
+		SceneManager.switchScene(event, "Signup.fxml");
 	}
 }

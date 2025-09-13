@@ -45,12 +45,12 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Label fx:id="EmailLabel" layoutX="300.0" layoutY="209.0" text="Enter you Email">
+            <Label layoutX="300.0" layoutY="209.0" text="Enter you Email">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="PasswordLabel" layoutX="300.0" layoutY="315.0" text="Enter you Password">
+            <Label layoutX="300.0" layoutY="315.0" text="Enter you Password">
                <font>
                   <Font size="16.0" />
                </font>

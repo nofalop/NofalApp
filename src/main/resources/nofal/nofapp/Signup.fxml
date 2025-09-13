@@ -15,7 +15,7 @@
       <AnchorPane layoutX="92.0" layoutY="70.0" style="-fx-background-radius: 20; -fx-background-color: #f0f0f0;" styleClass="Form" stylesheets="@Style.css">
          <children>
             <Rectangle arcHeight="30.0" arcWidth="50.0" fill="#eeeeee" height="73.0" layoutX="156.0" layoutY="113.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="525.0" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="113.0" />
-            <Button fx:id="Loginbtn" alignment="CENTER" layoutX="165.0" layoutY="119.0" mnemonicParsing="false" onAction="#LoginSwitch" prefHeight="57.0" prefWidth="244.0" styleClass="backgroundColor" stylesheets="@Style.css" text="Login">
+            <Button alignment="CENTER" layoutX="165.0" layoutY="119.0" mnemonicParsing="false" onAction="#LoginSwitch" prefHeight="57.0" prefWidth="244.0" styleClass="backgroundColor" stylesheets="@Style.css" text="Login">
                <font>
                   <Font size="27.0" />
                </font>
@@ -44,7 +44,7 @@
                </font>
             </PasswordField>
             <ComboBox fx:id="Genders" layoutX="299.0" layoutY="288.0" prefHeight="31.0" prefWidth="191.0" promptText="Gender" style="-fx-background-color: white;" styleClass="TextfieldColor" stylesheets="@Style.css" />
-            <Button fx:id="SignupAcc" alignment="CENTER" layoutX="242.0" layoutY="514.0" mnemonicParsing="false" onAction="#Signup" prefHeight="57.0" prefWidth="306.0" style="-fx-background-color: #dddddd;" text="SignUp to Nofal APP !">
+            <Button alignment="CENTER" layoutX="242.0" layoutY="514.0" mnemonicParsing="false" onAction="#Signup" prefHeight="57.0" prefWidth="306.0" style="-fx-background-color: #dddddd;" text="SignUp to Nofal APP !">
                <font>
                   <Font size="27.0" />
                </font>
