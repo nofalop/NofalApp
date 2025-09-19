@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class SceneManager {
 
@@ -20,5 +21,31 @@ public class SceneManager {
 		stage.setScene(newScene);
 		stage.centerOnScreen();
 		stage.show();
+	}
+	public static void openNewWindow(String fxmlFile, String stageName) throws IOException {
+		FXMLLoader loader = new FXMLLoader(SceneManager.class.getResource(fxmlFile));
+		Parent root = loader.load();
+
+		Stage stage = new Stage();
+
+		stage.setTitle(stageName);
+		stage.setScene(new Scene(root));
+		stage.show();
+	}
+	public static <T> T openNewWindowGetC(String fxmlFile, String stageName) throws IOException {
+		URL fxmlUrl = SceneManager.class.getResource(fxmlFile);
+		if (fxmlUrl == null) {
+			throw new IllegalStateException("FXML not found on classpath: " + fxmlFile);
+		}
+
+		FXMLLoader loader = new FXMLLoader(fxmlUrl);
+		Parent root = loader.load();
+
+		Stage stage = new Stage();
+		stage.setTitle(stageName);
+		stage.setScene(new Scene(root));
+		stage.show();
+
+		return loader.getController();
 	}
 }

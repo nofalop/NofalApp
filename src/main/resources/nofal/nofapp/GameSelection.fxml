@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="911.0" styleClass="backgroundColor" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nofal.nofapp.GameModes">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="911.0" styleClass="backgroundColor" stylesheets="@Styles/Style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nofal.nofapp.GameModes">
    <children>
       <Label layoutX="165.0" layoutY="7.0" text="GameModes Selection Section">
          <font>
             <Font name="Berlin Sans FB" size="47.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="74.0" layoutY="63.0" prefHeight="398.0" prefWidth="764.0" style="-fx-background-color: white; -fx-background-radius: 30;" styleClass="Form" stylesheets="@Style.css">
+      <AnchorPane layoutX="74.0" layoutY="63.0" prefHeight="398.0" prefWidth="764.0" style="-fx-background-color: white; -fx-background-radius: 30;" styleClass="Form" stylesheets="@Styles/Style.css">
          <children>
             <Button fx:id="PackManBtn" layoutX="14.0" layoutY="309.0" mnemonicParsing="false" onAction="#StartPacMan" prefHeight="66.0" prefWidth="209.0" text="Pacman">
                <font>

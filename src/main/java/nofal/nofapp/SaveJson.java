@@ -42,7 +42,7 @@ public class SaveJson {
 			showErr(ex.getMessage());
 		}
 	}
-	public boolean CheckData(TextField email,  PasswordField password){
+	public boolean CheckData(TextField email,  PasswordField Password){
 		try{
 			Map<String, User> accounts = loadAccounts();
 			if(accounts.isEmpty()){
@@ -50,7 +50,7 @@ public class SaveJson {
 			}
 
 			String emailValue = email.getText();
-			String passwordValue = password.getText();
+			String passwordValue = Password.getText();
 
 			if(emailValue == null || emailValue.isBlank() || passwordValue.isEmpty()){
 				return false;

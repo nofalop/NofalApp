@@ -1,4 +1,4 @@
-package nofal.nofapp.Gamemodes;
+package nofal.nofapp.Gamemodes.WebEN;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -8,6 +8,9 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebHistory;
 import javafx.scene.web.WebView;
+import nofal.nofapp.SceneManager;
+
+import java.io.IOException;
 
 public class Web {
 	@FXML
@@ -28,7 +31,7 @@ public class Web {
 	@FXML
 	public  void initialize(){
 		engine = WV.getEngine();
-		URLText.setText("google");
+		URLText.setText("google.com");
 		webZoom = 1;
 		loadPage();
 
@@ -75,11 +78,20 @@ public class Web {
 			}
 		});
 
-
+		userHistory.setOnMouseClicked(_ -> {
+			try {
+				UHController controller =  SceneManager.openNewWindowGetC("/nofal/nofapp/UsersHistory.fxml", "History");
+				if(controller != null){
+					controller.loadUserHistory(engine.getHistory());
+				}
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		});
 
 	}
 
 	private void loadPage(){
-		engine.load("https://" + URLText.getText() + ".com");
+		engine.load("https://" + URLText.getText());
 	}
 }

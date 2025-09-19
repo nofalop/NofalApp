@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="664.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nofal.nofapp.Gamemodes.WebEN.UHController">
+   <children>
+      <HBox fx:id="Container" alignment="TOP_CENTER" layoutX="38.0" layoutY="49.0" prefHeight="566.0" prefWidth="424.0" style="-fx-background-color: white; -fx-background-radius: 10;" styleClass="shadow-item" stylesheets="@Styles/WebStyle.css">
+         <padding>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <ScrollPane prefWidth="399.0">
+               <content>
+                  <VBox fx:id="UHContainer" alignment="TOP_CENTER" prefHeight="10.0" prefWidth="397.0" spacing="10.0" style="-fx-background-radius: 10;">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="172.0" layoutY="5.0" text="USER HISTORY">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
