@@ -1,0 +1,27 @@
+.image-view {
+    -fx-cursor: hand;
+}
+
+.image-view:hover {
+    -fx-opacity: 0.7;
+}
+
+.text-field {
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #ccc;
+    -fx-padding: 5 10;
+}
+
+.UserHistory-Label{
+    -fx-background-color: #dddddd;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 8, 0, 0, 0);
+    -fx-border-color: #dddddd;
+    -fx-background-radius: 10;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+}
+
+.shadow-item {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+}

@@ -10,11 +10,11 @@ module nofal.nofapp {
 	requires org.kordamp.bootstrapfx.core;
 	requires com.google.gson;
 
-	// Export packages (so other modules can use your classes)
+	// Export packages (only if other modules need them)
 	exports nofal.nofapp;
-	exports nofal.nofapp.Gamemodes;
 
-	// Open packages for reflection (FXML + Gson)
+	// Open packages for FXML (reflection)
 	opens nofal.nofapp to javafx.fxml, com.google.gson;
-	opens nofal.nofapp.Gamemodes to javafx.fxml;
+	opens nofal.nofapp.Gamemodes.WebEN to javafx.fxml;
+	opens nofal.nofapp.Gamemodes.PacmanEN to javafx.fxml;
 }
