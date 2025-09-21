@@ -1,15 +1,20 @@
-package nofal.nofapp;
+package nofal.nofapp.MainForm;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import nofal.nofapp.AnimationUtil.Animations;
+import nofal.nofapp.managers.JsonManager;
+import nofal.nofapp.managers.SceneManager;
 
 import java.io.IOException;
 
 public class SignupC {
 
 	private String _Name,_Password,_Email, _Gender;
-	private final  SaveJson saveJson = new SaveJson();
+	private final JsonManager jsonManager = new JsonManager();
+	private final Animations animations = new Animations();
 
 	public SignupC(){
 
@@ -32,8 +37,10 @@ public class SignupC {
 	private Label NameLabel,EmailLabel,PasswordLabel;
 
 	@FXML
-	private Button Signupbtn;
+	private Button Signupbtn,Loginbtn,SignupAcc;
 
+	@FXML
+	private AnchorPane ACPBg;
 
 	@FXML
 	private ComboBox<String> Genders;
@@ -41,11 +48,15 @@ public class SignupC {
 	@FXML
 	public void initialize(){
 		Genders.getItems().addAll("Male", "Female");
+		animations.BtnGrow(Signupbtn);
+		animations.BtnGrow(Loginbtn);
+		animations.BtnGrow(SignupAcc);
+		animations.BgMove(ACPBg);
 		Signupbtn.setStyle("-fx-background-color: #3498db;");
 	}
 
 	public void LoginSwitch(ActionEvent event) throws IOException {
-		SceneManager.switchScene(event, "Login.fxml");
+		SceneManager.switchScene(event, "/nofal/nofapp/Login.fxml");
 	}
 
 	private boolean CheckIfValid(){
@@ -74,7 +85,7 @@ public class SignupC {
 			return false;
 		}
 
-		if(saveJson.CheckData(Email, Password)){
+		if(jsonManager.CheckData(Email, Password)){
 
 			return false;
 		}
@@ -96,7 +107,7 @@ public class SignupC {
 
 	public void Signup(ActionEvent event) throws IOException {
 		if(CheckIfValid()){
-			saveJson.saveData(_Name,_Password, _Email, _Gender);
+			jsonManager.saveData(_Name,_Password, _Email, _Gender);
 			SceneManager.switchScene(event, "GameSelection.fxml");
 		}
 	}

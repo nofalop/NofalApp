@@ -6,20 +6,18 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1001.0" styleClass="backgroundColor" stylesheets="@Styles/Style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nofal.nofapp.LoginC">
+<AnchorPane fx:id="ACPBg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1001.0" styleClass="backgroundColor" stylesheets="@Styles/Style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nofal.nofapp.MainForm.LoginC">
    <children>
-      <AnchorPane layoutX="92.0" layoutY="70.0" style="-fx-background-radius: 20; -fx-background-color: #f0f0f0;" styleClass="Form" stylesheets="@Styles/Style.css">
+      <AnchorPane layoutX="92.0" layoutY="70.0" prefHeight="630.0" prefWidth="818.0" style="-fx-background-radius: 20; -fx-background-color: #f0f0f0;" styleClass="Form" stylesheets="@Styles/Style.css">
          <children>
-            <Rectangle arcHeight="30.0" arcWidth="50.0" fill="#eeeeee" height="73.0" layoutX="156.0" layoutY="113.0" stroke="BLACK" strokeType="INSIDE" styleClass="rectangle" width="525.0" AnchorPane.bottomAnchor="423.0" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="113.0" />
-            <Button fx:id="Loginbtn" alignment="CENTER" layoutX="165.0" layoutY="119.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" styleClass="backgroundColor" stylesheets="@Styles/Style.css" text="Login">
+            <Button fx:id="Loginbtn" alignment="CENTER" layoutX="157.0" layoutY="119.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" stylesheets="@Styles/Style.css" text="Login">
                <font>
                   <Font size="27.0" />
                </font>
             </Button>
-            <Button fx:id="Signupbtn" alignment="CENTER" layoutX="426.0" layoutY="119.0" mnemonicParsing="false" onAction="#SignupSwitch" prefHeight="57.0" prefWidth="244.0" styleClass="backgroundColor" stylesheets="@Styles/Style.css" text="SignUp">
+            <Button fx:id="Signupbtn" alignment="CENTER" layoutX="418.0" layoutY="119.0" mnemonicParsing="false" onAction="#SignupSwitch" prefHeight="57.0" prefWidth="244.0" stylesheets="@Styles/Style.css" text="SignUp">
                <font>
                   <Font size="27.0" />
                </font>
@@ -27,17 +25,17 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <TextField fx:id="Email" layoutX="300.0" layoutY="234.0" promptText="Email" styleClass="TextfieldColor">
+            <TextField fx:id="Email" layoutX="292.0" layoutY="234.0" promptText="Email" styleClass="TextfieldColor">
                <font>
                   <Font size="15.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="Password" layoutX="300.0" layoutY="340.0" promptText="Password" styleClass="TextfieldColor" stylesheets="@Styles/Style.css">
+            <PasswordField fx:id="Password" layoutX="292.0" layoutY="340.0" promptText="Password" styleClass="TextfieldColor" stylesheets="@Styles/Style.css">
                <font>
                   <Font size="15.0" />
                </font>
             </PasswordField>
-            <Button fx:id="LoginAcc" alignment="CENTER" layoutX="242.0" layoutY="514.0" mnemonicParsing="false" onAction="#Login" prefHeight="57.0" prefWidth="306.0" style="-fx-background-color: #dddddd;" text="Login to Nofal APP !">
+            <Button fx:id="LoginAcc" alignment="CENTER" layoutX="234.0" layoutY="514.0" mnemonicParsing="false" onAction="#Login" prefHeight="57.0" prefWidth="306.0" style="-fx-background-color: #dddddd;" text="Login to Nofal APP !">
                <font>
                   <Font size="27.0" />
                </font>
@@ -45,17 +43,17 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Label layoutX="300.0" layoutY="209.0" text="Enter you Email">
+            <Label layoutX="292.0" layoutY="209.0" text="Enter you Email">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="300.0" layoutY="315.0" text="Enter you Password">
+            <Label layoutX="292.0" layoutY="315.0" text="Enter you Password">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="182.0" text="Welcome to Nofal App">
+            <Label layoutX="174.0" text="Welcome to Nofal App">
                <font>
                   <Font name="Andalus" size="51.0" />
                </font>

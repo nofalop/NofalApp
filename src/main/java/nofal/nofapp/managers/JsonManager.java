@@ -1,4 +1,4 @@
-package nofal.nofapp;
+package nofal.nofapp.managers;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -10,8 +10,9 @@ import com.google.gson.reflect.TypeToken;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import nofal.nofapp.MainForm.User;
 
-public class SaveJson {
+public class JsonManager {
 	// You can remove setPrettyPrinting() if you want compact one-line JSON
 	private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 	private final Type AccountType = new TypeToken<Map<String, User>>(){}.getType();

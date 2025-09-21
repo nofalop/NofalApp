@@ -14,11 +14,12 @@
 
 .rectangle {
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
+    -fx-border-color: #dddddd;
+    -fx-border-width: 2;
 }
 
 .button {
-    -fx-background-color: linear-gradient(to right, #dddddd, #4d4d4d);
-    -fx-border-color: #adadad;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0);
     -fx-border-width: 2;
     -fx-border-radius: 30;
     -fx-background-radius: 30;

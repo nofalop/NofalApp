@@ -8,7 +8,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebHistory;
 import javafx.scene.web.WebView;
-import nofal.nofapp.SceneManager;
+import nofal.nofapp.managers.SceneManager;
 
 import java.io.IOException;
 
@@ -88,9 +88,7 @@ public class Web {
 				throw new RuntimeException(e);
 			}
 		});
-
 	}
-
 	private void loadPage(){
 		engine.load("https://" + URLText.getText());
 	}

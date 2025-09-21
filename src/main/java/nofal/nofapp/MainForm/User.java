@@ -1,4 +1,4 @@
-package nofal.nofapp;
+package nofal.nofapp.MainForm;
 
 public class User {
 	private String name;
