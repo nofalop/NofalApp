@@ -2,6 +2,8 @@ package nofal.nofapp.managers;
 
 import java.io.*;
 import java.lang.reflect.Type;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,7 +19,8 @@ public class JsonManager {
 	private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 	private final Type AccountType = new TypeToken<Map<String, User>>(){}.getType();
 	private final Alert alert = new Alert(Alert.AlertType.ERROR);
-	private final File FILE = new File("C:\\Users\\L-G\\OneDrive\\Desktop\\Code\\Java\\Nofal_app\\NofApp\\src\\main\\resources\\nofal\\nofapp\\UsersInfo\\Info.json");
+	private final Path path = Paths.get("UsersInfo", "Info.json");
+	private final File FILE = path.toFile();
 
 	private Map<String, User> loadAccounts(){
 		if(!FILE.exists() || FILE.length() == 0){
@@ -32,9 +35,9 @@ public class JsonManager {
 	}
 
 
-	public void saveData(String name, String email, String password, String gender) {
+	public void saveData(String name, String email, String password, String gender, String userpfp, boolean isOnline) {
 		Map<String, User> accounts = loadAccounts();
-		accounts.put(email, new User(name, email, password, gender));
+		accounts.put(email, new User(name, email, password, gender, userpfp, isOnline));
 
 		try(BufferedWriter bw = new BufferedWriter(new FileWriter(FILE))){
 			gson.toJson(accounts, AccountType, bw);
@@ -43,6 +46,14 @@ public class JsonManager {
 			showErr(ex.getMessage());
 		}
 	}
+	private void saveData(Map<String, User> accounts) {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE))) {
+			gson.toJson(accounts, AccountType, bw);
+		} catch (IOException ex) {
+			showErr(ex.getMessage());
+		}
+	}
+
 	public boolean CheckData(TextField email,  PasswordField Password){
 		try{
 			Map<String, User> accounts = loadAccounts();
@@ -68,7 +79,48 @@ public class JsonManager {
 		}
 		return false; // returns False if it doesn't find it
 	}
+	public User getUserByEmail(String email) {
+		try {
+			Map<String, User> accounts = loadAccounts();
+			for (User user : accounts.values()) {
+				if (email.equals(user.getEmail())) {
+					return user; // fully populated user
+				}
+			}
+		} catch (OutOfMemoryError ex) {
+			showErr("err");
+		}
+		return null; // no user found
+	}
+	public void updateUserStatus(String email , boolean status){
+		try {
+			Map<String, User> accounts = loadAccounts();
 
+			// find the user
+			User user = accounts.get(email);
+			if (user != null) {
+				user.setUserStatus(status);
+
+				// save back to file
+				saveData(accounts);
+
+			}
+		} catch (Exception ex) {
+			showErr("Error updating user status: " + ex.getMessage());
+		}
+	}
+
+	public Map<String, User> loadUsers(){
+		if(!FILE.exists() || FILE.length() == 0){
+			return new HashMap<>();
+		}
+		try(BufferedReader br = new BufferedReader(new FileReader(FILE))){
+			return gson.fromJson(br, AccountType);
+		}
+		catch (IOException ex){
+			return new HashMap<>();
+		}
+	}
 	private void showErr(String msg) {
 		alert.setTitle("Error");
 		alert.setHeaderText("Something went wrong");

@@ -5,9 +5,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import nofal.nofapp.AnimationUtil.Animations;
+import nofal.nofapp.Gamemodes.GameModes;
 import nofal.nofapp.managers.JsonManager;
 import nofal.nofapp.managers.SceneManager;
 
+import java.io.File;
 import java.io.IOException;
 
 public class SignupC {
@@ -31,10 +33,10 @@ public class SignupC {
 	private PasswordField Password;
 
 	@FXML
-	private TextField Name,Email;
+	private TextField Name, Email;
 
 	@FXML
-	private Label NameLabel,EmailLabel,PasswordLabel;
+	private Label nameLabel,EmailLabel,PasswordLabel;
 
 	@FXML
 	private Button Signupbtn,Loginbtn,SignupAcc;
@@ -61,7 +63,7 @@ public class SignupC {
 
 	private boolean CheckIfValid(){
 		if(Name.getText() == null || Name.getText().isEmpty()){
-			NameLabel.setText("Please enter your name");
+			nameLabel.setText("Please enter your name");
 			return false;
 		}
 
@@ -86,7 +88,6 @@ public class SignupC {
 		}
 
 		if(jsonManager.CheckData(Email, Password)){
-
 			return false;
 		}
 
@@ -104,11 +105,32 @@ public class SignupC {
 		return true;
 
 	}
-
 	public void Signup(ActionEvent event) throws IOException {
-		if(CheckIfValid()){
-			jsonManager.saveData(_Name,_Password, _Email, _Gender);
-			SceneManager.switchScene(event, "GameSelection.fxml");
+		if (CheckIfValid()) {
+			User user = new User(
+					_Name,
+					_Password,
+					_Email,
+					_Gender,
+					"/nofal/nofapp/Images/ChatImg/user.png",
+					false
+			);
+			jsonManager.saveData(
+					user.getName(),
+					user.getPassword(),
+					user.getEmail(),
+					user.getGender(),
+					user.getUserPfp(),
+					user.getUserStatus()
+			);
+
+			GameModes controller = SceneManager.switchSceneGetC(
+					event,
+					"/nofal/nofapp/GameSelection.fxml",
+					"Game mode Selection"
+			);
+
+			controller.setUser(user); // ✅ pass the logged-in user
 		}
 	}
 }

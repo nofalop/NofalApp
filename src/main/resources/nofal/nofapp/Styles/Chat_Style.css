@@ -1,0 +1,15 @@
+.bgTrans{
+    -fx-opacity: 0.5;
+}
+.bgTransInfo{
+    -fx-opacity: 0.6;
+}
+.textColor{
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: black; /* or any color */
+}
+.image-container {
+    -fx-background-color:  #878787;
+    -fx-padding: 10;
+    -fx-background-radius: 0 15 0 15;
+}

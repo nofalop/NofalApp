@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import nofal.nofapp.AnimationUtil.Animations;
+import nofal.nofapp.Gamemodes.GameModes;
 import nofal.nofapp.managers.JsonManager;
 import nofal.nofapp.managers.SceneManager;
 
@@ -12,6 +13,7 @@ import java.io.IOException;
 
 public class LoginC {
 	private final JsonManager jsonManager = new JsonManager();
+	private final User user = new User();
 	private final Alert conAlert = new Alert(Alert.AlertType.CONFIRMATION);
 	private final Alert badAlert = new Alert(Alert.AlertType.ERROR);
 	private final Animations animations = new Animations();
@@ -37,13 +39,19 @@ public class LoginC {
 	}
 
 	public void Login(ActionEvent event) throws IOException {
-		if(!jsonManager.CheckData(Email, Password)){
-			System.out.println("Account was not found");
+		User loggedInUser = jsonManager.getUserByEmail(Email.getText());
+		if (loggedInUser == null) {
 			Accnotfound();
 			return;
 		}
-		confirmation();
-		SceneManager.switchScene(event, "/nofal/nofapp/GameSelection.fxml");
+
+		GameModes controller = SceneManager.switchSceneGetC(
+				event,
+				"/nofal/nofapp/GameSelection.fxml",
+				"Game mode Selection"
+		);
+
+		controller.setUser(loggedInUser); // pass full user object
 	}
 
 	private void confirmation(){

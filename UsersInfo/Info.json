@@ -1,0 +1,18 @@
+{
+  "asdfasdfasdf": {
+    "name": "Nofal",
+    "password": "asdfasdfasdf",
+    "email": "a@gmail.com",
+    "gender": "Male",
+    "userpfp": "/nofal/nofapp/Images/ChatImg/user.png",
+    "isOnline": false
+  },
+  "asfdfsdafdsfds": {
+    "name": "jack",
+    "password": "asfdfsdafdsfds",
+    "email": "b@gmail.com",
+    "gender": "Male",
+    "userpfp": "/nofal/nofapp/Images/ChatImg/user.png",
+    "isOnline": false
+  }
+}

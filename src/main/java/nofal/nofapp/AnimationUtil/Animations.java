@@ -3,13 +3,19 @@ package nofal.nofapp.AnimationUtil;
 import javafx.animation.*;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.LinearGradient;
 import javafx.scene.paint.Stop;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class Animations {
@@ -56,7 +62,7 @@ public class Animations {
 			/*
 			v = 0 => RED -> BLUE
 			v = 0.5 => PURPLE -> TEAL
-			v = 1 => BLUE -> GREEN
+			v = 1 => PURPLE -> CYAN
 			*/
 			double v = newVal.doubleValue();
 
@@ -82,3 +88,4 @@ public class Animations {
 		timeline.play();
 	}
 }
+
