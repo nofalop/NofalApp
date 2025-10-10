@@ -22,8 +22,9 @@ module nofal.nofapp {
 	opens nofal.nofapp.MainForm to com.google.gson, javafx.fxml;
 	exports nofal.nofapp.managers;
 	opens nofal.nofapp.managers to com.google.gson, javafx.fxml;
-	exports nofal.nofapp.Gamemodes;
-	opens nofal.nofapp.Gamemodes to com.google.gson, javafx.fxml;
 	exports nofal.nofapp.Gamemodes.ChatEN;
 	opens nofal.nofapp.Gamemodes.ChatEN to com.google.gson, javafx.fxml;
+	exports nofal.nofapp.Gamemodes;
+	opens nofal.nofapp.Gamemodes to com.google.gson, javafx.fxml;
+	opens nofal.nofapp.Gamemodes.ChatEN.Server to com.google.gson;
 }

@@ -13,3 +13,25 @@
     -fx-padding: 10;
     -fx-background-radius: 0 15 0 15;
 }
+
+.message-label {
+    -fx-background-color: #f1f1f1;
+    -fx-text-fill: #000;
+    -fx-padding: 8 12;
+    -fx-margin: 20;
+    -fx-background-radius: 10 10 10 0;
+    -fx-font-size: 14px;
+    -fx-wrap-text: true;
+    -fx-max-width: 300;
+}
+
+.sent-message {
+    -fx-background-color: #d1f7c4; /* greenish bubble */
+    -fx-background-radius: 10 10 0 10;
+    -fx-alignment: center-right;
+}
+
+.received-message {
+    -fx-background-color: #f1f1f1; /* grayish bubble */
+    -fx-background-radius: 10 10 10 0;
+}

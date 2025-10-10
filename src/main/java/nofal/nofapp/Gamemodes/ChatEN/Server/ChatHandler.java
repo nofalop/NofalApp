@@ -19,10 +19,12 @@ public class ChatHandler implements HttpHandler {
 	static class ChatMessage {
 		String user;
 		String message;
+		long msgTime;
 
-		public ChatMessage(String user, String message) {
+		public ChatMessage(String user, String message, long msgTime) {
 			this.user = user;
 			this.message = message;
+			this.msgTime = msgTime;
 		}
 	}
 

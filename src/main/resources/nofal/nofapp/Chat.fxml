@@ -31,7 +31,10 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="userChat" layoutX="395.0" layoutY="126.0" prefHeight="616.0" prefWidth="910.0" style="-fx-background-color: adadad;" styleClass="bgTrans" stylesheets="@Styles/Chat_Style.css" />
+      <AnchorPane layoutX="395.0" layoutY="126.0" prefHeight="616.0" prefWidth="910.0" style="-fx-background-color: adadad;" styleClass="bgTrans" stylesheets="@Styles/Chat_Style.css">
+         <children>
+            <VBox fx:id="userChatCont" prefHeight="616.0" prefWidth="910.0" style="-fx-background-color: adadad;" styleClass="bgTrans" stylesheets="@Styles/Chat_Style.css" />
+         </children></AnchorPane>
       <AnchorPane layoutX="395.0" layoutY="44.0" prefHeight="82.0" prefWidth="910.0" style="-fx-background-color: adadad; -fx-background-radius: 15 15 0 0;" styleClass="bgTransInfo" stylesheets="@Styles/Chat_Style.css">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="910.0" spacing="10.0">
@@ -51,7 +54,7 @@
       </AnchorPane>
       <AnchorPane layoutX="395.0" layoutY="742.0" prefHeight="62.0" prefWidth="897.0" style="-fx-background-radius: 0 0 15 15;">
          <children>
-            <TextField prefHeight="62.0" prefWidth="910.0" promptText="Enter Message" style="-fx-background-radius: 0 0 15 15; -fx-background-color: #D3D3D3;" stylesheets="@Styles/Chat_Style.css">
+            <TextField fx:id="userMsg" prefHeight="62.0" prefWidth="910.0" promptText="Enter Message" style="-fx-background-radius: 0 0 15 15; -fx-background-color: #D3D3D3;" stylesheets="@Styles/Chat_Style.css">
                <font>
                   <Font size="17.0" />
                </font>

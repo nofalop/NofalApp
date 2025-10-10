@@ -9,7 +9,6 @@ import nofal.nofapp.Gamemodes.GameModes;
 import nofal.nofapp.managers.JsonManager;
 import nofal.nofapp.managers.SceneManager;
 
-import java.io.File;
 import java.io.IOException;
 
 public class SignupC {

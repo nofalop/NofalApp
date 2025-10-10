@@ -22,8 +22,6 @@ public class LoginC {
 	private Button Loginbtn,Signupbtn,LoginAcc;
 	@FXML
 	private TextField Email;
-	@FXML
-	private PasswordField Password;
 
 	@FXML
 	private AnchorPane ACPBg;

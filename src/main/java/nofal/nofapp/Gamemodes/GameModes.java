@@ -14,9 +14,9 @@ import nofal.nofapp.managers.SceneManager;
 
 public class GameModes {
 	private final Animations animations = new Animations();
+	private final ChatHttpsServer chatHttpsServer = new ChatHttpsServer();
 	private final JsonManager jsonManager = new JsonManager();
 	private User currentUser;
-	ChatHttpsServer chatHttpsServer = new ChatHttpsServer();
 
 	@FXML private Button Chatbtn,googleBtn;
 	@FXML private AnchorPane ACPBg;
@@ -35,10 +35,11 @@ public class GameModes {
 		onlineChat chatController = SceneManager.openNewWindowGetC("/nofal/nofapp/Chat.fxml", "nofdis");
 		if (currentUser != null) {
 			chatController.setUser(currentUser);
-
 		}
-		chatHttpsServer.start(8080);
+		assert currentUser != null;
 		jsonManager.updateUserStatus(currentUser.getEmail(), true);
+		chatHttpsServer.start(8080);
+
 	}
 
 	public void openGoogle() throws IOException {
