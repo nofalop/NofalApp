@@ -5,21 +5,21 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 
 public class ChatHttpsServer {
-	private HttpServer server;
+    private HttpServer server;
+    public void start(int port) throws IOException {
+        // Use the class field, not a new local variable
+        server = HttpServer.create(new InetSocketAddress(port), 0);
+        server.createContext("/messages", new ChatHandler());
+        server.setExecutor(null);
+        server.start();
 
-	public void start(int port) throws IOException {
-		server = HttpServer.create(new InetSocketAddress(port), 0);
-		// Register the /messages endpoint with ChatHandler
-		server.createContext("/messages", new ChatHandler());
-		server.setExecutor(null); // default executor
-		server.start();
-		System.out.println("Chat server started at https://localhost:" + port);
-	}
+        System.out.println("Server running at http://localhost:" + port);
+    }
 
-	public void stop() {
-		if (server != null) {
-			server.stop(0);
-			System.out.println("Chat server stopped.");
-		}
-	}
+    public void stop() {
+        if (server != null) {
+            server.stop(0);
+            System.out.println("Chat server stopped.");
+        }
+    }
 }

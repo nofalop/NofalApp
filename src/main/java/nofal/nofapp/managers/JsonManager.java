@@ -31,9 +31,6 @@ public class JsonManager {
 	private final Path UserChatpath = Paths.get("userChat", "userchat.json");
 	private final File UserChatFile = UserChatpath.toFile();
 
-
-
-
 	public void saveData(String name, String email, String password, String gender, String userpfp, boolean isOnline) {
 		Map<String, User> accounts = loadAccounts();
 		accounts.put(email, new User(name, email, password, gender, userpfp, isOnline));

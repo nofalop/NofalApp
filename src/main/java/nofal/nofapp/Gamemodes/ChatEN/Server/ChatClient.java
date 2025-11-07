@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets;
 import com.google.gson.Gson;
 
 public class ChatClient {
-	private static final String SERVER_URL = "http://localhost:8080";
+	private static final String SERVER_URL = "http://localhost:8080/messages";
 	private static final Gson gson = new Gson();
 
 	public static void sendMessage(String username, String text) {

@@ -8,11 +8,14 @@ import com.sun.net.httpserver.HttpHandler;
 import java.io.*;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ChatHandler implements HttpHandler {
-	private static final File CHAT_FILE = new File("src/nofal/nofapp/Gamemodes/ChatEN/Server/userChat/userchat.json");
+	private final Path UserChatpath = Paths.get("userChat", "userchat.json");
+	private final File CHAT_FILE = UserChatpath.toFile();
 	private final Gson gson = new Gson();
 
 	// Represent a chat message
