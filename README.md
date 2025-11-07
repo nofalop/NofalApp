@@ -8,6 +8,6 @@ Development has been stopped due to personal issues.
 Feel free to fork or reuse the code under the existing license.
 
 ### Last Working Version
-The last stable release was **v1.5.4**.
+The last stable release was **v1.6.4**.
 
 ---
